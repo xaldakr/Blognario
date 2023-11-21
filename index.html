@@ -1,139 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Visum Est Omnia</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="shortcut icon" href="./images/logo.ico" type="image/x-icon" />
     <!-- CSS PROPIO -->
     <link rel="stylesheet" href="./css/general.css" />
     <!-- Bootstrap CSS v5.2.1 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
-  <body>
+
+
+    <style>
+        #miElemento {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            cursor: pointer;
+            margin-top: 80px;
+            font-size: 64px;
+            color: white;
+        }
+
+        #miElemento:hover h1 {
+            font-size: 64px;
+
+        }
+    </style>
+</head>
+
+<body>
     <header>
-      <nav class="navbar navbar-expand-lg w-100" variant="dark">
-        <div class="container">
-          <a
-            class="navbar-brand txtwhite d-flex align-items-center"
-            href="./index.html"
-          >
-            <img src="./images/logo.png" class="img-fluid imgnav mt-0" alt="" />
-            <h1 class="d-inline" style="background-color: black">LOGNARIO</h1>
-          </a>
-          <button
-            class="navbar-toggler txtwhite"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link txtwhite" href="./binario.html"
-                  >CONVERTIDOR BINARIO</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+        <nav class="navbar navbar-expand-lg w-100" variant="dark">
+            <div class="container">
+                <a class="navbar-brand txtwhite d-flex align-items-center" href="./index.html">
+                    <img src="./images/logo.png" class="img-fluid imgnav mt-0" alt="" />
+                    <h1 class="d-inline" style="background-color: black">LOGNARIO</h1>
+                </a>
+                <button class="navbar-toggler txtwhite" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link txtwhite" href="./binario.html">CONVERTIDOR BINARIO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
-      <div class="contaiprin">
-        <br />
-        <div class="container">
-          <div class="text-center intro">
-            <h1 id="intro" style="background-color: rgba(252, 252, 252, 0.6)">
-              01101000 01101111 01101100 01100001
-            </h1>
-            <img
-              src="./images/logo.png"
-              class="App-logo"
-              alt="logo"
-              id="anilogo"
-            />
-            <p>
-              Una vista más allá de este planeta, donde pocos tienen la
-              oportunidad, ahora al alcance de tu navegador, para poder ver y
-              aprender sobre todo lo que hay fuera de la vista común
-            </p>
-            <h4>¿Qué hay en V.E.O.?</h4>
-            <ul>
-              <li>Vista informativa de cuerpos celestes</li>
-              <li>Datos Curiosos sobre el universo</li>
-              <li>Guías de Aprendizaje interactivo</li>
-              <li>Información básica para entender temas astronómicos</li>
-            </ul>
-          </div>
+        <div class="contaiprin">
+            <br />
+            <div class="container">
+                <div class="text-center intro">
+
+                    <div id="miElemento" onmouseover="cambiarTexto()" onmouseout="restaurarTexto()"
+                        style="font-size: 64px;">
+                        BInario
+                    </div>
+                    <img src="./images/logo.png" class="App-logo" alt="logo" id="anilogo" />
+
+
+                    <div class="row" style="background-color: rgba(0, 0, 0, 0.8); color: white;">
+
+                        <p id="miParrafo" onmouseover="cambiarTextoParrafo()" onmouseout="restaurarTextoParrafo()">
+                            <b>¿Qué es el sistema binario?</b><br><br>
+                            El sistema binario o sistema diádico es un sistema de numeración fundamental en la
+                            computación e
+                            informática, en el cual la totalidad de los números pueden representarse empleando cifras
+                            compuestas por combinaciones de dos únicos dígitos.<br><br>
+
+                            En el caso del código binario, los dígitos utilizados son ceros (0) y unos (1). No debemos
+                            confundir el sistema con el código, ya que el primero podría operar con dígitos como a y b
+                            (dado
+                            que la lógica es la misma), mientras que el segundo opera específicamente con 1 y 0.<br><br>
+
+                            El sistema binario es la base fundamental de la informática y se utiliza ampliamente en
+                            todos
+                            los aspectos de la computación. En el sistema binario, la información se representa
+                            utilizando
+                            solo dos dígitos: 0 y 1. Cada dígito en el sistema binario se llama bit (contracción de
+                            binary
+                            digit). Aquí hay algunas áreas principales en las que se utiliza el sistema binario en
+                            informática:<br><br>
+                            <b>- Representación de Datos:</b> Toda la información, como texto, números e imágenes, se
+                            internamente
+                            traduce a secuencias de bits (0 y 1).<br><br>
+                            <b>- Procesamiento de Datos:</b> La CPU opera con instrucciones y datos codificados en
+                            binario,
+                            realizando operaciones aritméticas y lógicas mediante manipulación de bits.<br><br>
+                            <b>- Almacenamiento de Datos:</b> Dispositivos como discos duros almacenan información en
+                            binario,
+                            organizando bits en bytes y estructuras más grandes.<br><br>
+                            <b>- Comunicación de Datos:</b> En redes, la transferencia de datos se realiza en binario,
+                            dividiendo
+                            la
+                            información en paquetes interpretados como 0 o 1.<br><br>
+                            <b>- Representación de Instrucciones de Programa:</b> Los programas se escriben en
+                            lenguajes, pero
+                            al
+                            ejecutarse, las instrucciones se traducen a código de máquina binario para la CPU.<br><br>
+                            <b>- Sistemas de Números Binarios:</b> Los sistemas numéricos en informática, como la
+                            notación
+                            hexadecimal, se basan en el sistema binario, utilizado para representar direcciones de
+                            memoria y
+                            colores en programación.<br><br>
+                            ASCII (American Standard Code for Information Interchange) es un conjunto de caracteres y
+                            códigos de caracteres que asigna representaciones numéricas a letras, números, signos de
+                            puntuación y otros caracteres utilizados en la comunicación de texto en computadoras y
+                            dispositivos relacionados.<br><br>
+                            En ASCII, cada caracter se asigna a un número decimal único, y estos números decimales se
+                            representan internamente en binario para su procesamiento en sistemas informáticos.<br><br>
+                            <b>Asignación Decimal a Caracteres:</b> Cada caracter en el conjunto ASCII tiene una
+                            asignación
+                            numérica decimal única. Por ejemplo, la letra 'A' está asignada al número decimal
+                            65.<br><br>
+                            <b>Representación Binaria:</b> El número decimal asignado a un caracter en ASCII se
+                            representa
+                            internamente en binario. En el caso de 'A', el 65 se representa como 1000001 en
+                            binario.<br><br>
+                            <b>Procesamiento en Sistemas Binarios:</b> Las computadoras procesan y almacenan estos
+                            códigos
+                            binarios
+                            internamente. La CPU realiza operaciones y manipulaciones en el nivel binario, incluida la
+                            interpretación de los códigos ASCII binarios.<br><br>
+                            <b>Comunicación y Almacenamiento:</b> Cuando se transmiten datos de texto entre dispositivos
+                            o se
+                            almacenan en archivos, la representación binaria de los caracteres ASCII es fundamental.
+                            Cada
+                            caracter se codifica como una secuencia binaria específica según su asignación en ASCII.
+                            El sistema binario es esencial en ASCII porque permite la representación interna de
+                            caracteres
+                            en los sistemas informáticos. Cada letra, número o símbolo tiene una representación binaria
+                            única que facilita su procesamiento, almacenamiento y transmisión en entornos digitales.
+                        </p>
+
+                    </div>
+
+
+                </div>
+            </div>
         </div>
-      </div>
     </main>
 
     <footer class="bg-dark text-white py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <p>Avila Posada, Xavier Alexander</p>
-            <p>Calderón Cortéz, José Luis</p>
-            <p>Rodríguez Vallecíos, Christopher Rodrigo</p>
-            <p>@2023, Todos los derechos izquierdos</p>
-          </div>
-          <div class="col-lg-6">
-            <h2>Enlaces Rápidos</h2>
-            <ul class="list-unstyled">
-              <li><a href="./index.html">Inicio</a></li>
-              <li><a href="./binario.html">Convertidor binario</a></li>
-            </ul>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Avila Posada, Xavier Alexander</p>
+                    <p>Calderón Cortéz, José Luis</p>
+                    <p>Rodríguez Vallecíos, Christopher Rodrigo</p>
+                    <p>@2023, Todos los derechos izquierdos</p>
+                </div>
+                <div class="col-lg-6">
+                    <h2>Enlaces Rápidos</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./binario.html">Convertidor binario</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      $(document).ready(function () {
-        $("#anilogo").hover(
-          function () {
-            $(this).css("opacity", 0.5);
-          },
-          function () {
-            $(this).css("opacity", 1); // Restaura la opacidad en el evento mouseout
-          }
-        );
-      });
+        $(document).ready(function () {
+            $("#anilogo").hover(
+                function () {
+                    $(this).css("opacity", 0.5);
+                },
+                function () {
+                    $(this).css("opacity", 1); // Restaura la opacidad en el evento mouseout
+                }
+            );
+        });
+    </script>
+
+    <script>
+        // Función para cambiar el texto
+        function cambiarTexto() {
+            // Se obtiene el elemento por su ID y se cambia el contenido
+            document.getElementById("miElemento").innerHTML = "01100010 01101001 01101110 01100001 01110010 01101001 01101111";
+        }
+
+        // Función para restaurar el texto original
+        function restaurarTexto() {
+            // Se obtiene el elemento por su ID y se restaura el contenido original
+            document.getElementById("miElemento").innerHTML = "BInario";
+        }
     </script>
     <!-- Otros JS -->
-  </body>
+
+
+
+
+</body>
+
 </html>
