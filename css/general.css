@@ -23,7 +23,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 .intro {
   text-align: center;
@@ -73,8 +73,8 @@
 }
 
 .navbar {
-  background-color: #3d1200b1 !important;
-  color: #c2c2c2 !important;
+  background-color: #00263db1 !important;
+  color: #ffffff !important;
   position: fixed !important;
   top: 0 !important;
 }
