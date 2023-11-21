@@ -65,7 +65,8 @@
         <div class="container">
           <div class="text-center intro">
             <h1 id="intro" style="background-color: rgba(252, 252, 252, 0.6)">
-              01101000 01101111 01101100 01100001
+              01000010 01101100 01101111 01100111 01101110 01100001 01110010
+              01101001 01101111
             </h1>
             <img
               src="./images/logo.png"
@@ -73,18 +74,68 @@
               alt="logo"
               id="anilogo"
             />
-            <p>
-              Una vista más allá de este planeta, donde pocos tienen la
-              oportunidad, ahora al alcance de tu navegador, para poder ver y
-              aprender sobre todo lo que hay fuera de la vista común
-            </p>
-            <h4>¿Qué hay en V.E.O.?</h4>
-            <ul>
-              <li>Vista informativa de cuerpos celestes</li>
-              <li>Datos Curiosos sobre el universo</li>
-              <li>Guías de Aprendizaje interactivo</li>
-              <li>Información básica para entender temas astronómicos</li>
-            </ul>
+            <h1 style="background-color: rgba(252, 252, 252, 0.6)">
+              Convertidor Binario
+            </h1>
+            <hr />
+            <div class="row justify-content-center align-items-center g-2">
+              <div class="col-sm-1">
+                <div class="btn btn-dark btnmover h-100" id="left">
+                  <i class="fas fa-arrow-left"></i>
+                </div>
+              </div>
+              <div class="col carro" id="carro1">
+                <h2 style="background-color: rgba(252, 252, 252, 0.6)">
+                  Ascii a Binario (Texto a Binario)
+                </h2>
+                <hr />
+                <textarea
+                  class="w-100"
+                  id="textInput"
+                  placeholder="Escribe tu texto Aquí"
+                ></textarea>
+                <button id="convertButton" class="btn btn-dark btn">
+                  Convertir</button
+                ><br />
+                <br />
+                <h2 style="background-color: rgba(252, 252, 252, 0.6)">
+                  Resultado
+                </h2>
+
+                <div
+                  id="binaryOutput"
+                  style="background-color: rgba(252, 252, 252, 0.902)"
+                ></div>
+              </div>
+              <div class="col carro" id="carro2">
+                <h2 style="background-color: rgba(252, 252, 252, 0.6)">
+                  Binario a Ascii (Binario a Texto)
+                </h2>
+                <hr />
+                <textarea
+                  class="w-100"
+                  id="binaryInput"
+                  placeholder="Escribe tu binario Aquí"
+                ></textarea>
+                <button id="convertButton2" class="btn btn-dark btn">
+                  Convertir</button
+                ><br />
+                <br />
+                <h2 style="background-color: rgba(252, 252, 252, 0.6)">
+                  Resultado
+                </h2>
+
+                <div
+                  id="asciiOutput"
+                  style="background-color: rgba(252, 252, 252, 0.902)"
+                ></div>
+              </div>
+              <div class="col-sm-1">
+                <div class="btn btn-dark btnmover h-100" id="right">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -120,10 +171,15 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(document).ready(function () {
+        //Hover
         $("#anilogo").hover(
           function () {
             $(this).css("opacity", 0.5);
@@ -132,6 +188,94 @@
             $(this).css("opacity", 1); // Restaura la opacidad en el evento mouseout
           }
         );
+        //Texto a binario
+        $("#convertButton").click(function () {
+          var asciiText = $("#textInput").val();
+
+          var binaryText = asciiToBinary(asciiText);
+
+          $("#binaryOutput").text(binaryText);
+        });
+
+        function asciiToBinary(asciiText) {
+          var binaryResult = "";
+          for (var i = 0; i < asciiText.length; i++) {
+            var charCode = asciiText.charCodeAt(i);
+            // Convierte el código de caracter a binario
+            var binaryChar = ("00000000" + charCode.toString(2)).slice(-8);
+            binaryResult += binaryChar + " ";
+          }
+          return binaryResult.trim();
+        }
+        //Binario a Texto
+        $("#convertButton2").click(function () {
+          var binaryText = $("#binaryInput").val();
+          var binaryWithoutSpaces = binaryText.replace(/\s/g, "");
+          var asciiText = binaryToAscii(binaryWithoutSpaces);
+          $("#asciiOutput").text(asciiText);
+        });
+
+        function binaryToAscii(binaryText) {
+          var binaryArray = binaryText.match(/.{1,8}/g);
+          var asciiResult = "";
+          for (var i = 0; i < binaryArray.length; i++) {
+            var asciiChar = String.fromCharCode(parseInt(binaryArray[i], 2));
+            asciiResult += asciiChar;
+          }
+          return asciiResult;
+        }
+        //Carrousel
+        var currentDiv = 1;
+        var totalDivs = $(".carro").length;
+        function showNextDiv() {
+          currentDiv++;
+          if (currentDiv > totalDivs) {
+            currentDiv = 1;
+          }
+          $(".carro").hide();
+          $("#carro" + currentDiv).show();
+        }
+        function showPrevDiv() {
+          currentDiv--;
+          if (currentDiv < 1) {
+            currentDiv = totalDivs;
+          }
+          $(".carro").hide();
+          $("#carro" + currentDiv).show();
+        }
+        $("#right").click(showNextDiv);
+        $("#left").click(showPrevDiv);
+        $(".carro").hide();
+        $("#carro1").show();
+        //Carga del titulo
+        var binaryText = $("#intro").text().trim().replace(/\s/g, "");
+        $("#intro").empty();
+
+        animateBinaryChange(binaryText, 0);
+
+        function animateBinaryChange(binaryText, index) {
+          if (index < binaryText.length) {
+            var partialBinary = binaryText.substring(index, binaryText.length);
+
+            $("#intro").text(partialBinary);
+            setTimeout(function () {
+              animateBinaryChange(binaryText, index + 1);
+            }, 15);
+          } else {
+            $("#intro").empty();
+
+            animateTextFadeIn("Blognario", 0);
+          }
+        }
+
+        function animateTextFadeIn(text, index) {
+          if (index < text.length) {
+            $("#intro").append(text[index]);
+            setTimeout(function () {
+              animateTextFadeIn(text, index + 1);
+            }, 55);
+          }
+        }
       });
     </script>
     <!-- Otros JS -->
