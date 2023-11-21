@@ -1,4 +1,4 @@
-Página de Visum Est Omnia
+Página de Blognario
 No se que más agregar al readme de momento asi que alli les cae un lorem ipsum XD
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget urna blandit, placerat ipsum at, hendrerit massa. In aliquam non tellus nec laoreet. Nunc eu euismod enim, vel condimentum leo. Maecenas dapibus eros a tortor malesuada euismod. Sed a lectus non nulla hendrerit ultrices. Ut facilisis est sed tortor accumsan lobortis. Pellentesque venenatis mauris lectus, eget fermentum erat gravida ac. Vestibulum eget erat dapibus, lobortis risus fringilla, mattis dui. Proin porta enim diam, non hendrerit mi luctus quis. Sed vehicula dictum urna in condimentum. Ut eu nibh enim. Fusce commodo nulla elit, vitae posuere metus congue in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc facilisis, metus quis lacinia mattis, quam erat malesuada sem, dignissim ultricies justo orci vitae sapien.
 
